@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ruhi's Birthday ❤️</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Short+Stack&amp;family=Homemade+Apple&amp;display=swap'>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://kit.fontawesome.com/d26ea24c59.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Add a background music -->
+  <audio id="backgroundMusic" loop autoplay>
+    <source src="./music/happy-birthday-to-you-piano-version-13976.mp3">
+  </audio>
+  <!-- Add a button to toggle music -->
+  
+  <!-- partial:index.partial.html -->
+  <!-- A pen by Developer Kingshuk  -->
+  <div class="paper heart">
+    <h1 class="say-sorry"><b>I love You!! So Muccchhhh!!!😘😘</b></h1>
+  </div>
+
+  <div class="paper image">
+    <p><b>Dear Ruhi</b></p>
+    <p><b>Happy Birthday To You 😍</b> </p>
+    <img src="./images/04.jpg" />    
+  </div>
+
+  <div class="paper image">
+    <p><b>and I fallen in</b></p>
+    <p><b>Love with You 😍</b></p>
+    <img src="./images/03.jpg" />
+  </div>
+
+  <div class="paper image">
+    <p></p>
+    <img src="./images/02.jpg" />
+  </div>
+
+  <div class="paper image">
+    <p><b>How can be</b> </p>
+    <p><b>Someone So Cute!!! ❤️</b> </p>
+    <img src="./images/01.jpg" />
+  </div>
+
+  <div class="paper red">
+    <p class="p1"><b>and My Special</b></p>
+    <p class="p2"><b>Person 😍</b></p>
+  </div>
+
+  <div class="paper">
+    <p class="p1"><b>You are so Cute!!</b></p>
+    <p class="p1"><b>Amazing!</b> <span style="color: red !important;">❤️</span></p>
+  </div>
+
+  <div class="paper">
+    <p class="p1"><b>Drag the papers to move!</b></p>
+  </div>
+  <div class="btn-container">
+    <button id="toggleMusic" class="btn-primary"><i class="fa-solid fa-music"></i> Please! Play Music First <i class="fa-solid fa-music"></i></button>
+  </div>
+  <!-- partial -->
+ 
+  <!-- partial -->
+  <script src="./script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const backgroundMusic = document.getElementById("backgroundMusic");
+      const toggleMusicButton = document.getElementById("toggleMusic");
+
+      // Toggle music function
+      function toggleMusic() {
+        if (backgroundMusic.paused) {
+          backgroundMusic.play();
+          toggleMusicButton.textContent = "Pause Music";
+        } else {
+          backgroundMusic.pause();
+          toggleMusicButton.textContent = "Play Music";
+        }
+      }
+
+      // Add event listener to the toggle music button
+      toggleMusicButton.addEventListener("click", toggleMusic);
+    });
+  </script>
+  
+</body>
+</html>
